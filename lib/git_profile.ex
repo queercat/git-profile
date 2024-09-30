@@ -71,6 +71,9 @@ defmodule GitProfile do
             show_usage(1)
         end
 
+      "whoami" ->
+        Actions.Whoami.whoami()
+
       _ ->
         show_usage()
     end
@@ -103,6 +106,8 @@ defmodule GitProfile do
     )
 
     IO.puts(" - switch/1 {profile_name}: Switches the current git profile to {profile_name}.")
+
+    IO.puts(" - whoami/0: Prints out information about the current git profile.")
 
     IO.puts("Flags:")
 
